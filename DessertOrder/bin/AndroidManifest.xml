@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dessertorder"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+   
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE">
+    </uses-permission>
+	<application android:allowBackup="false" android:icon="@drawable/ic_launcher">
+    	<activity android:name=".FullscreenActivity">
+    	    <intent-filter >
+    	        <action android:name="android.intent.action.MAIN"/>
+    	        <category android:name="android.intent.category.LAUNCHER"/>
+    	    </intent-filter>
+    	</activity>
+    	<service android:name="com.service.network.NetService" android:enabled="true">
+    		<intent-filter >
+    		    <action android:name="com.service.network.NetService"/>
+    		</intent-filter>    
+    	</service>    
+    </application>
+    
+</manifest>
